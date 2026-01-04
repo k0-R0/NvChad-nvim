@@ -12,16 +12,16 @@ opt.relativenumber = true --keep relativenumber on by default
 opt.guifont = "Hack Nerd Font:h14" -- use hack nerd font
 opt.clipboard = "unnamedplus" -- opt system clipboard
 vim.g.clipboard = {
-  name = "win32yank-wsl",
-  copy = {
-    ["+"] = "win32yank -i --crlf",
-    ["*"] = "win32yank -i --crlf",
-  },
-  paste = {
-    ["+"] = "win32yank -o --lf",
-    ["*"] = "win32yank -o --lf",
-  },
-  cache_enabled = 0,
+    name = "win32yank-wsl",
+    copy = {
+        ["+"] = "win32yank -i --crlf",
+        ["*"] = "win32yank -i --crlf",
+    },
+    paste = {
+        ["+"] = "win32yank -o --lf",
+        ["*"] = "win32yank -o --lf",
+    },
+    cache_enabled = 0,
 }
 
 opt.spelllang = { "en", "de" } -- Set language for spellchecking
@@ -42,10 +42,10 @@ opt.incsearch = true -- Show matches as you type
 opt.termguicolors = true -- Enable 24-bit colors
 opt.signcolumn = "yes" -- Always show sign column
 opt.guicursor = {
-  "n-v-c:block",
-  "i-ci-ve:ver25",
-  "r-cr:hor20",
-  "o:hor50",
+    "n-v-c:block",
+    "i-ci-ve:ver25",
+    "r-cr:hor20",
+    "o:hor50",
 }
 
 -- File Handling
