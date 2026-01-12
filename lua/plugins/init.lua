@@ -13,6 +13,11 @@ return {
         end,
     },
 
+    --Vim be good
+    {
+        "ThePrimeagen/vim-be-good",
+        cmd = "VimBeGood",
+    },
     -- test new blink
     -- { import = "nvchad.blink.lazyspec" },
 
