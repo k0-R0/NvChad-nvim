@@ -11,18 +11,20 @@ opt.wrap = false -- Don't wrap lines
 opt.relativenumber = true --keep relativenumber on by default
 opt.guifont = "Hack Nerd Font:h14" -- use hack nerd font
 opt.clipboard = "unnamedplus" -- opt system clipboard
-vim.g.clipboard = {
-    name = "win32yank-wsl",
-    copy = {
-        ["+"] = "win32yank -i --crlf",
-        ["*"] = "win32yank -i --crlf",
-    },
-    paste = {
-        ["+"] = "win32yank -o --lf",
-        ["*"] = "win32yank -o --lf",
-    },
-    cache_enabled = 0,
-}
+-- ### uncomment this block on WSL
+-- vim.g.clipboard = {
+--     name = "win32yank-wsl",
+--     copy = {
+--         ["+"] = "win32yank -i --crlf",
+--         ["*"] = "win32yank -i --crlf",
+--     },
+--     paste = {
+--         ["+"] = "win32yank -o --lf",
+--         ["*"] = "win32yank -o --lf",
+--     },
+--     cache_enabled = 0,
+-- }
+-- ### uncomment this block on WSL
 
 opt.spelllang = { "en", "de" } -- Set language for spellchecking
 
