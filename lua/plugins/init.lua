@@ -92,4 +92,34 @@ return {
             }
         end,
     },
+
+    {
+        "karb94/neoscroll.nvim",
+        lazy = false,
+        config = function()
+            local neoscroll = require "neoscroll"
+
+            neoscroll.setup {
+                mappings = { "<C-u>", "<C-d>" },
+                duration_multiplier = 1.2,
+                easing = "quartic",
+            }
+
+            -- After scroll, center screen
+            local keymap = {
+                ["<C-u>"] = function()
+                    neoscroll.ctrl_u { duration = 200 }
+                    vim.cmd "normal! zz"
+                end,
+                ["<C-d>"] = function()
+                    neoscroll.ctrl_d { duration = 200 }
+                    vim.cmd "normal! zz"
+                end,
+            }
+
+            for key, func in pairs(keymap) do
+                vim.keymap.set("n", key, func)
+            end
+        end,
+    },
 }
