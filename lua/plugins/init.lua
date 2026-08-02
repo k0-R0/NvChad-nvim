@@ -134,4 +134,16 @@ return {
         ft = { "markdown" },
         opts = {},
     },
+    {
+        "amansingh-afk/milli.nvim",
+        lazy = false,
+        priority = 1000, -- Optional: ensures it loads early for the splash
+        config = function()
+            require("milli").dashboard {
+                splash = "cactus",
+                loop = true,
+                center = true,
+            }
+        end,
+    },
 }
